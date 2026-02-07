@@ -4,7 +4,9 @@ import dotenv from "dotenv";
 import connectDB from "./connect.js";
 import urlRoute from "./routes/url.js";
 import URL from "./models/url.js";
+import userRoute from "./routes/user.js";
 const PORT = 3000;
+
 dotenv.config();
 connectDB()
   .then(() => {
@@ -17,9 +19,11 @@ const app = express();
 app.use(cors({
   origin: "http://localhost:5173"
 }));
+
 app.use(express.json());
 
 app.use("/url", urlRoute);
+app.use("/user", userRoute);
 
 app.listen(PORT, () => console.log(`Server is running at ${PORT}`));
 
