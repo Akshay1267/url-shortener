@@ -23,7 +23,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/url", urlRoute);
-app.use("/user", userRoute);
+app.use("/api/users", userRoute);
 
 app.listen(PORT, () => console.log(`Server is running at ${PORT}`));
 
