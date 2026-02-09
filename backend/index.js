@@ -27,6 +27,12 @@ app.use("/api/users", userRoute);
 
 app.listen(PORT, () => console.log(`Server is running at ${PORT}`));
 
+app.get("/", (req, res) => {
+  res.send("URL Shortener API is running 🚀");
+});
+app.get("/favicon.ico", (req, res) => res.status(204));
+
+
 app.get("/:shortId", async (req, res) => {
   try {
     const shortId = req.params.shortId;
