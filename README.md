@@ -1,4 +1,3 @@
-cat <<EOF > README.md
 # **URL Shortener - MERN Stack**
 
 A powerful and secure **URL Shortener** application built with the **MERN** stack (MongoDB, Express.js, React, Node.js). This tool allows users to transform long, cumbersome URLs into neat, shareable links while providing detailed click analytics and secure user management.
@@ -40,10 +39,10 @@ A powerful and secure **URL Shortener** application built with the **MERN** stac
 ## **Installation**
 
 1.  **Clone the Repository:**
-    \`\`\`bash
+    ```
     git clone https://github.com/Akshay1267/url-shortener.git
     cd url-shortener
-    \`\`\`
+    ```
 
 2.  **Setup Backend:**
     * Navigate to the \`backend\` folder.
