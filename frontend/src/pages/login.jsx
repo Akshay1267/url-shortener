@@ -24,7 +24,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/users/login",
+        `${process.env.REACT_APP_API_URL}/api/users/login`,
         form
       );
 
