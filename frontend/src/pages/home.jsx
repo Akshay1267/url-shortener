@@ -46,7 +46,7 @@ export default function Home() {
       }
 
       const res = await axios.post(
-        `${process.env.VITE_API_URL}/url`,
+        `${import.meta.env.VITE_API_URL}/url`,
         { url: url },
         {
           headers: {
@@ -73,7 +73,7 @@ export default function Home() {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(`${process.env.VITE_API_URL}/${shortId}`);
+    navigator.clipboard.writeText(`${import.meta.env.VITE_API_URL}/${shortId}`);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -200,12 +200,12 @@ export default function Home() {
               
               <div className="flex items-center space-x-2 bg-white p-4 rounded-lg border border-gray-200">
                 <a
-                  href={`${process.env.VITE_API_URL}/${shortId}`}
+                  href={`${import.meta.env.VITE_API_URL}/${shortId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-purple-600 hover:text-purple-700 font-medium truncate"
                 >
-                  {process.env.VITE_API_URL}/{shortId}
+                  {import.meta.env.VITE_API_URL}/{shortId}
                 </a>
                 <button
                   onClick={copyToClipboard}
